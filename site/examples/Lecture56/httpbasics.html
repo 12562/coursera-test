@@ -1,0 +1,79 @@
+<!-- HTTP basics:
+   Hyper Text Transfer Protocol
+   Based on request/response stateless protocol
+   * Client opens connection to server
+   * Client sends HTTP request for a resource
+   * Server sends HTTP response to the client with resource or error.
+   * Client closes connection to server
+
+  Identifying Resources on the Web:
+    i)  URN : Uniform Resource Name
+           -> Uniquely identifies resource or name of resource.
+           -> Does not tell us how to get the resource.
+        * Locally distinguish resources
+          eg. /html/css/javascript/web/developers/   
+
+    ii) URI : Uniform Resource Identifier
+           -> Uniquely identifies resource or location of resource
+           -> Does not necessarily tell us how to get the resource
+        
+        eg. official_web_site/index.html
+
+    iii) URL : Uniform Resource Locator
+        * Form of URI that provides info on how to get resource
+
+        eg. http://www.mysite.com/official_web_site/index.html
+
+  HTTP Request Structure (GET)
+   
+ Method  URI string   Query String  HTTP version
+    ^       ^               ^            ^
+   ||      ||              ||           ||
+  ___  __________ ________________ ________ 
+  GET /index.html?fisrtName=Yaakov HTTP/1.1
+
+
+  HTTP Methods
+
+  # GET
+     * Retrieves the resource
+     * Data is passed to server as part of the URI
+           i.e., query string
+
+  # POST
+     * Sends data to server in order to be processed
+
+     * Data is sent in the message body
+
+  HTTP Request Structure (POST)
+
+     POST  /index.html HTTP/1.1
+     Host: coursera.org       
+     Accept-Charset: utf-8    
+     firstName=xyz...
+     ...
+     ...
+
+  HTTP Response Structure
+
+  HTTP      Response  English
+  Version   status    phrase
+            code      describing
+                      status code
+     ^        ^          ^
+    ||        ||        ||
+  HTTP/1.1   200        OK   (Separated by a single space)
+
+
+  Some Response Status Codes
+
+  200 OK
+    * Ok, here is the content you requested
+  404 Not Found
+    * Server can't find the requested
+  403 Forbidden
+    * Unauthenticated client tried to access a secure resource
+  500 Internal Server Error
+    * Some unhandled error was raised on the server
+
+-->  
